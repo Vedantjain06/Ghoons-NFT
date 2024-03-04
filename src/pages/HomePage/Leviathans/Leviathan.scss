@@ -1,0 +1,157 @@
+@import "../../../styles/global.scss";
+
+
+.leviathan {
+  position: relative;
+  height: 95vw;
+  min-height: 1000px;
+
+  @include mq() {
+    height: 145vw;
+    min-height: auto;
+  }
+
+  &__title {
+    position: absolute;
+    top: 18vw;
+    left: 16vw;
+    z-index: 10;
+    font-weight: 800 !important;
+
+    background: linear-gradient(180deg, #1d1a1a 0%, rgba(0, 0, 0, 0.47) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+ 
+  &__text {
+    background: linear-gradient(180deg, #48b942 0%, rgb(254, 255, 254) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    
+
+    width: 44vw;
+    text-align: center;
+    font-style: italic;
+
+    position: absolute;
+    top: 31vw;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+
+    @include mq() {
+      top: 48vw;
+    }
+
+    &_title {
+      font-weight: 700 !important;
+    }
+
+    &_sub_title {
+      font-weight: 700 !important;
+      
+    }
+  }
+  &__to_top {
+    text-align: center;
+    margin-bottom: 10px;
+    border: 1px solid $white;
+    color: $white;
+    background-color: $black;
+    width: 24vw;
+    margin: 0 auto;
+
+    position: absolute;
+    bottom: 7vw;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include mq() {
+      display: none;
+    }
+
+    &:hover {
+      color: $black;
+      background-color: $white;
+      transition: color 0.6s ease, background-color 0.6s ease;
+    }
+  }
+  &__bottom {
+    position: absolute;
+    bottom: 2vw;
+    left: 2vw;
+    right: 2vw;
+
+    &_link {
+      font-size: 1.5vw;
+      color: $white;
+      padding: 3px 10px;
+      transition: all 0.3s ease;
+
+      @include mq($tablet, ">") {
+        &:hover {
+          color: $cream;
+        }
+      }
+
+      @include mq() {
+        font-size: 4vw;
+      }
+    }
+
+    &_copyright {
+      color: $grey;
+    }
+  }
+
+  &__body {
+    &_image {
+      &--1 {
+        width: 12vw;
+        position: absolute;
+        top: 13vw;
+        left: 2vw;
+      }
+
+      &--2 {
+        width: 12vw;
+        position: absolute;
+        top: 16vw;
+        right: 18vw;
+      }
+
+      &--3 {
+        width: 17vw;
+        position: absolute;
+        bottom: 15vw;
+        left: 18vw;
+
+        @include mq() {
+          bottom: 44vw;
+          left: 8vw;
+        }
+      }
+
+      &--4 {
+        width: 9vw;
+        position: absolute;
+        bottom: 15vw;
+        left: 50vw;
+
+        @include mq() {
+          bottom: 46vw;
+          left: 76vw;
+        }
+      }
+
+      &--5 {
+        width: 8vw;
+        position: absolute;
+        top: 24vw;
+        left: 19vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "../../../styles/global.scss";
+
+.footer {
+  color: $dark-grey;
+  margin: 3.6vw 0;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 30px;
+    letter-spacing: 6.72px;
+    text-align: center;
+    max-width: 80%;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 80%;
+    margin: 60px auto;
+    gap: 2vw;
+    flex-wrap: wrap;
+    text-align: center;
+
+    @include mq() {
+      flex-direction: column;
+    }
+  }
+
+  &__links {
+    font-family: Din, sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    gap: 10px;
+
+    @include mq() {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 3vw;
+    }
+  }
+
+  &__link {
+    font-size: 1.5vw;
+    color: $black;
+    padding: 3px 10px;
+    transition: all .3s ease;
+
+    @include mq($tablet, '>') {
+      &:hover {
+        color: $cream;
+      }
+    }
+
+    @include mq() {
+      font-size: 4vw;
+    }
+  }
+}

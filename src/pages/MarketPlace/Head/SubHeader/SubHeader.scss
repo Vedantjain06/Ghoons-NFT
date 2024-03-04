@@ -1,0 +1,131 @@
+@import "../../../../styles/global.scss";
+
+.subheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #000;
+
+  margin-top: 4vw;
+  height: 5vw;
+  padding: 0 1vw;
+
+  @include mq() {
+    margin-top: 20vw;
+    height: 14vw;
+    justify-content: space-around;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    position: relative;
+  }
+
+  &__button {
+    cursor: pointer;
+    color: #100f0f;
+    background-color: #ddb724;
+    padding: 1vw;
+    width: 14vw;
+    text-align: center;
+
+    @include mq() {
+      width: 26vw;
+      padding: 2vw;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+    text-wrap: nowrap;
+    padding: 1.2vw 2vw;
+    border-right: 0.2vw solid $white;
+
+    @include mq() {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 1vw;
+    position: absolute;
+    top: 5vw;
+  }
+
+  &__link {
+    text-transform: none;
+    font-size: 1.5vw;
+    text-align: center;
+
+    text-wrap: nowrap;
+    padding: 0.3vw;
+    color: $white;
+    @include hoverForLinks($white);
+  }
+}
+
+.menu {
+  position: relative;
+
+  &__title {
+    @extend %link;
+    cursor: pointer;
+    padding: 1.3vw;
+
+    transition: all 0.3s ease;
+
+    &--active {
+      background-color: $white;
+      color: $black;
+    }
+
+    @include mq() {
+      padding: 4vw 1.3vw;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 4.8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-wrap: nowrap;
+    background-color: $white;
+    text-align: center;
+
+    @include mq() {
+      top: 11vw;
+      gap: 2.5vw;
+      padding-top: 3vw;
+    }
+
+    &_item {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+
+      @extend %link;
+      cursor: pointer;
+    }
+  }
+
+  &__link {
+    padding: 1.4vw;
+    color: $black;
+    position: relative;
+    z-index: 2;
+    @include hoverForLinks($black, $white);
+
+    @include mq() {
+      padding: 3.4vw 2vw;
+    }
+  }
+}

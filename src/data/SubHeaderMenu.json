@@ -1,0 +1,53 @@
+[
+  {
+    "title": "Buying",
+    "links": [
+      {
+        "text": "Buy resources",
+        "path": "/"
+      },
+      {
+        "text": "Buy weapons",
+        "path": "/"
+      },
+      {
+        "text": "Buy a spaceship",
+        "path": "/"
+      }
+    ]
+  },  
+  {
+    "title": "Target",
+    "links": [
+      {
+        "text": "Auction",
+        "path": "/"
+      },
+      {
+        "text": "Dividends",
+        "path": "/"
+      },
+      {
+        "text": "Sell",
+        "path": "/"
+      }
+    ]
+  },
+  {
+    "title": "Shop",
+    "links": [
+      {
+        "text": "Accessories",
+        "path": "/"
+      },
+      {
+        "text": "Companions",
+        "path": "/"
+      },
+      {
+        "text": "Cosmetics",
+        "path": "/"
+      }
+    ]
+  }
+]

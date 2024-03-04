@@ -1,0 +1,43 @@
+@import "../../../../styles/global.scss";
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5vw 4vw 3vh 3vw;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 2vw;
+
+  @include mq() {
+    padding-top: 10vw;
+  }
+
+  &__body {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+  }
+
+  &__linkContainer {
+    perspective: 120px;
+    perspective-origin: bottom;
+  }
+
+  &__link {
+    color: black;
+    cursor: pointer;
+    text-wrap: nowrap;
+    
+    @include hoverForLinks($black, $white);
+    
+    &_item {
+      padding: 1vw 0.6vw;
+      position: relative;
+      z-index: 10;
+      display: block;
+    }
+  }
+}
+

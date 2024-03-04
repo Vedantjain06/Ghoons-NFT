@@ -1,0 +1,26 @@
+[
+  {
+    "id": "invasion",
+    "title": "Social Media",
+    "date": "18-02-2024",
+    "type": "Event",
+    "leftText": "Expanding our online presence to connect with you even better! Join us on our social media platforms to stay updated on the latest news, exciting announcements, behind-the-scenes glimpses, and so much more🌟",
+    "rigthText": "We're thrilled to announce a special reward waiting for you on our social media channels! Yes, you read that right we have something fantastic lined up just for you, 90% of the earnings from project will be distributed among our believers"
+  },
+  {
+    "id": "new-year",
+    "title": "Reward$",
+    "date": "28-02-24",
+    "type": " Event",
+    "leftText": "We're excited to announce that we'll be revealing our airdrop partner very soon! This partnership is a significant step forward for us, and we can't wait to unveil the details to our incredible community.",
+    "rigthText": "In our continuous effort to enhance your server experience and show our appreciation for your unwavering support, we're excited to announce that we'll be introducing direct pay rewards in our DAO post mint!"
+  },
+  {
+    "id": "pet",
+    "title": "Project-X?",
+    "date": "_-03-24",
+    "type": "Event",
+    "leftText": "FREE MINT on solana.True believers of Ghoons will be given OG role for our upcoming project on Solana financially backed by whales soon after mint of Ghoons ",
+    "rigthText": "We aim to launch more Free mints to link the two chains together and gave 90% of profit to community"
+  }
+]

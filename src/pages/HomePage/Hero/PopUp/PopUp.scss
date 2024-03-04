@@ -1,0 +1,54 @@
+@import "../../../../styles/global.scss";
+
+.pop_up {
+  &__button {
+    background: url("../../../../images/home/pop_up.svg") center no-repeat;
+    background-size: cover;
+    width: 5vw;
+    height: 4vw;
+    cursor: pointer;
+    background-color: gray;
+
+    transition: all 0.2s ease;
+
+    position: absolute;
+    left: 2vw;
+    top: 6vw;
+
+    @include mq() {
+      width: 15vw;
+      height: 12vw;
+      top: 10vw;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__text {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    background-color: $dark-grey;
+    z-index: 12;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+
+    @extend %link;
+    text-transform: none;
+  }
+
+  &__blur {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(128, 128, 128, 0.5); /* Сірий колір з прозорістю 50% */
+    filter: blur(6px);
+    z-index: 11;
+  }
+}

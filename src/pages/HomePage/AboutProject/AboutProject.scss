@@ -1,0 +1,20 @@
+@import "../../../styles/global.scss";
+
+.about_project {
+  position: relative;
+  height: 40vw;
+
+  @include mq() {
+    height: 80vw;
+    
+  }
+  
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+  }
+}

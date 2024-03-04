@@ -1,0 +1,51 @@
+@import "../../styles/global.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $black;
+  height: 4vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 10;
+
+  @include mq() {
+    height: 15vw;
+  }
+
+  &__navigation {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+
+    &_item {
+      border-top: 1px solid $black;
+      position: relative;
+    }
+  }
+
+  &__link {
+    padding: 0.7vw 2.2vw;
+    display: block;
+    color: $white;
+    @include hoverForLinks($white);
+
+    @include mq($tablet, ">") {
+      font-size: 2.3vw;
+    }
+
+    &--wallet {
+      width: 27vw;
+      padding: 0.8vw 2.2vw;
+    }
+  }
+}

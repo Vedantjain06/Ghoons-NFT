@@ -1,0 +1,11 @@
+.text_split {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  
+  &__mask {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+  }
+}

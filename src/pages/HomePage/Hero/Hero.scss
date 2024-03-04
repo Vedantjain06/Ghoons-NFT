@@ -1,0 +1,241 @@
+@import "../../../styles/global.scss";
+
+.hero {
+  position: relative;
+  height: 100svh;
+
+  @include mq() {
+    margin-top: 10vw;
+  }
+
+  &__under_header {
+    position: absolute;
+    right: 3vw;
+    top: 4.4vw;
+    text-align: center;
+    line-height: normal;
+    background: $golden;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 32vw;
+    z-index: 1;
+
+    @include mq() {
+      display: none;
+    }
+  }
+
+  .about {
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.4vw;
+    width: 80vw;
+
+    @include mq() {
+      flex-direction: column;
+      position: absolute;
+      bottom: 0;
+      left: 40%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.4vw;
+      width: 66vw;
+    }
+
+    &__download {
+      position: relative;
+      color: $black;
+      @extend %link;
+      font-weight: bold;
+
+      &_button {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 1.5vw;
+        margin-top: 2vw;
+
+        padding: 1vw 2vw;
+        background: linear-gradient(
+          180deg,
+          #7af070 0%,
+          rgba(243, 255, 101, 0.69) 100%
+        );
+        transition: all 0.3s ease;
+
+        @include mq() {
+          font-size: 5vw;
+        }
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      &_text {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $light-cream;
+        font-size: 2.7vw;
+
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      &_content {
+        height: 100%;
+        width: 100%;
+        justify-content: space-evenly;
+      }
+
+      .download_os_choose {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        &_text {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          gap: 1vw;
+
+          @include mq($laptop, ">") {
+            font-size: 1.5vw;
+            gap: 3vw;
+          }
+        }
+
+        &_logo {
+          width: 24%;
+          height: 24%;
+        }
+
+        &__button {
+          padding: 1vw 2vw;
+          background: linear-gradient(
+            180deg,
+            #7af070 0%,
+            rgba(243, 255, 101, 0.69) 100%
+          );
+          transition: all 0.3s ease;
+
+          @include mq($laptop, ">") {
+            font-size: 1.2vw;
+          }
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+
+      .cross {
+        width: 1.5vw;
+        height: 1.5vw;
+        cursor: pointer;
+
+        @include mq() {
+          width: 5vw;
+          height: 5vw;
+        }
+      }
+    }
+
+    &__title {
+      text-wrap: nowrap;
+
+      @include mq() {
+        font-size: 7vw;
+      }
+    }
+
+    &_sub_title {
+      background: $golden;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      font-size: 2vw;
+
+      @include mq() {
+        font-size: 7vw;
+      }
+    }
+  }
+}
+
+.paralax {
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  &__top {
+    background: url("../../../images/home/hero-part-1.png") no-repeat center;
+    top: 0;
+    height: 86vh;
+    width: 100vw;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  &__bottom {
+    background: url("../../../images/home/hero-part-2.png") no-repeat center
+      bottom;
+    bottom: -6%;
+    height: 70%;
+    background-size: cover;
+    z-index: 0;
+  }
+
+  &__text {
+    color: $white;
+
+    font-family: Inter, sans-serif;
+    font-size: 7.6vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 116%;
+    letter-spacing: 0.4vw;
+    mix-blend-mode: luminosity;
+
+    position: absolute;
+    bottom: 48svh;
+    left: 13vw;
+
+    display: flex;
+    align-items: flex-end;
+    gap: 6vw;
+
+    @include mq() {
+      text-align: center;
+      font-size: 13vw;
+      display: block;
+
+      bottom: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+
+      mix-blend-mode: difference;
+
+      background: $golden;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

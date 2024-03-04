@@ -1,0 +1,112 @@
+@import "../../../styles/global.scss";
+
+.marketplace {
+  position: relative;
+
+  &_bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.head {
+  &__body {
+    display: flex;
+    margin: 0 auto;
+
+    margin-top: 15vw;
+
+    flex-wrap: wrap;
+    & h2 {
+      font-size: 2vw;
+      font-weight: bold;
+    }
+  }
+  &__expect {
+    display: flex;
+    flex-direction: column;
+    max-width: 40vw;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    margin-right: 4vw;
+  }
+
+  &__lock {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: flex-end;
+
+    &::after {
+      display: block;
+      content: "";
+      width: 52px;
+      height: 45.55px;
+      background-image: url("/images/MarketPlace/lock.svg");
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    max-width: 45vw;
+    align-items: center;
+    text-align: center;
+    gap: 82px;
+
+    & h1 {
+      font-weight: bold;
+      text-transform: none;
+    }
+  }
+}
+
+.temporarily {
+  display: flex;
+  gap: 20px;
+  padding: 18px 0;
+  background-color: #d9d9d9;
+  align-items: center;
+  justify-content: center;
+
+  &__cube {
+    display: flex;
+    width: 30px;
+    height: 30px;
+
+    border: 8px solid $dark-grey;
+    background: rgba(217, 217, 217, 0);
+  }
+
+  & p {
+    color: $black;
+  }
+}
+.trading {
+  display: flex;
+  background-color: $dark-grey;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 3vw;
+
+  &-text {
+    text-align: center;
+    padding: 0.6vw;
+    font-size: 1vw;
+    max-width: 30vw;
+    border: 1px solid #fefefe;
+  }
+
+  &__partners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3vw 1vw;
+    text-align: center;
+    max-width: 20vw;
+  }
+}

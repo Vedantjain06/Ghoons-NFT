@@ -1,0 +1,51 @@
+@import "./variables";
+
+@mixin mq($size: $tablet, $type: '<', $size-next: null) {
+  @if ($type == '<') {
+    @media (max-width: #{$size}px) {
+      @content;
+    }
+  }
+
+  @if ($type == '>') {
+    @media (min-width: #{$size}px) {
+      @content;
+    }
+  }
+
+  @if ($type == '<>') {
+    @media screen and (min-width: #{$size}px) and (max-width: #{$size-next}px) {
+      @content;
+    }
+  }
+}
+
+@mixin hoverForLinks($bgColor, $hoverTextColor: 'none') {
+  @include mq($tablet, '>') {
+    position: relative;
+    transition: all .2s ease;
+
+    &::after{
+      content: "";
+      background: $bgColor;
+      mix-blend-mode: exclusion;
+      width: 100%;
+      height: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: all .2s ease;
+    }
+
+    
+    &:hover::after{
+      height: 100%;
+    }
+    
+    @if($hoverTextColor != 'none') {
+      &:hover {
+        color: $hoverTextColor;
+      }
+    }
+  }
+}

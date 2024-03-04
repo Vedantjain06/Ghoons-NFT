@@ -1,0 +1,89 @@
+@import "../../../styles/global.scss";
+
+.technology {
+  height: 60vw;
+  position: relative;
+  background-color: $black;
+
+  @include mq() {
+    height: 150vw;
+    min-height: 700px;
+  }
+
+  &__title {
+    display: flex;
+    margin-bottom: 0.4vw;
+    padding-bottom: 0.4vw;
+    font-weight: 700;
+
+    border-bottom: 0.2vw solid white;
+
+    @include mq() {
+      font-size: 6vw;
+    }
+  }
+
+  &__text {
+    width: 69vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+
+    padding: 3vw 0;
+
+    @include mq() {
+      height: 100%;
+      justify-content: space-around;
+    }
+
+    & p {
+      text-align: center;
+      font-weight: 400;
+
+      @include mq() {
+        font-size: 4vw;
+      }
+    }
+  }
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+  @include mq() {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  & a {
+    display: flex;
+    flex-direction: column;
+    padding: 11px;
+    font-size: 2vw;
+    gap: 0.5vw;
+    text-align: center;
+    transition: background-color 0.3s;
+    align-items: center;
+
+    @include mq() {
+      font-size: 5vw;
+    }
+    
+    & img {
+      display: block;
+      height: 2.5vw;
+      width: 2.5vw;
+      
+      @include mq() {
+        height: 6.5vw;
+        width: 6.5vw;
+      }
+    }
+  }
+}

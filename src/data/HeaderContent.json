@@ -1,0 +1,28 @@
+[
+  {
+    "title": "About Us",
+    "link": "/",
+    "type": "section-link"
+  },
+  {
+    "title": "Contacts",
+    "link": "contacts",
+    "type": "section-link"
+  },
+  {
+    "title": "Road Map",
+    "link": "roadmap",
+    "type": "section-link"
+  },
+ 
+  {
+    "title": "Marketplace",
+    "link": "marketplace",
+    "type": "section-link"
+  },
+  {
+    "title": "White Paper",
+    "link": "../pdf/Docs.pdf",
+    "type": "download"
+  }
+]

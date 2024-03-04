@@ -1,0 +1,124 @@
+@import "../../../styles/global.scss";
+
+.head {
+  display: flex;
+
+  @include mq($tablet-large) {
+    margin-top: 0;
+    height: 100vh;
+    min-height: 400px;
+    max-height: 700px;
+  }
+
+  &__image {
+    @include mq($tablet-large) {
+      object-position: top;
+    }
+  }
+
+  &__title {
+    color: $cream;
+    position: absolute;
+    top: 15vw;
+    left: 25vw;
+
+    @include mq($tablet - 1) {
+      font-size: 8vw;
+      mix-blend-mode: difference;
+      color: $cream;
+    }
+
+    @include mq($tablet-large) {
+      top: 26vh;
+      left: 10vw;
+    }
+  }
+
+  &__phases {
+    align-self: flex-end;
+    margin-bottom: 2.5vw;
+    margin-left: 2.5vw;
+
+    @include mq() {
+      margin-left: 6.5vw;
+    }
+
+    &_title {
+      margin-bottom: 1vw;
+
+      font-weight: bold;
+      letter-spacing: 0.5vw;
+      text-transform: uppercase;
+      font-family: Inter, sans-serif;
+    }
+
+    &_list {
+      display: flex;
+      gap: 1.26vw;
+      margin-bottom: 20px;
+      padding-bottom: 1vw;
+      border-bottom: 1px solid $white;
+
+      @include mq($tablet-large) {
+        gap: 8px;
+      }
+
+      @include mq($phablet) {
+        flex-direction: column;
+        padding: 0 0 1vw;
+        border-left: 1px solid $white;
+        border-bottom: none;
+      }
+    }
+
+    &_item {
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 0.8vw;
+        height: 0.8vw;
+        background-color: $white;
+        position: absolute;
+        bottom: -1.4vw;
+        left: 50%;
+
+        @include mq($phablet) {
+          width: 1.8vw;
+          height: 1.8vw;
+          bottom: 0;
+          top: 40%;
+          left: -2.5%;
+        }
+      }
+
+      &:last-child {
+        margin-left: 2vw;
+        padding-left: 0.7vw;
+        font-size: 2vw;
+        align-self: flex-end;
+        
+        @include mq($phablet) {
+          margin: 0;
+          align-self: auto;
+          padding-left: 2vw;
+          font-size: 20px;
+        }
+      }
+    }
+
+    &_link {
+      font-size: 2vw;
+      padding: 6px;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: $cream;
+      }
+
+      @include mq($phablet)  {
+        font-size: 20px;
+      }
+    }
+  }
+}

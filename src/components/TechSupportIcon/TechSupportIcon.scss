@@ -1,0 +1,36 @@
+@import "../../styles/global.scss";
+
+.tech-support-icon {
+  position: fixed;
+  bottom: 10%;
+  right: 4%;
+  z-index: 9;
+  display: inline-block;
+  border-radius: 50%;
+
+  padding: 15px;
+  transition: all 0.3s ease;
+  width: 3vw;
+  height: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(228, 6, 6);
+
+  @include mq() {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  &:hover {
+    border-radius: 50%;
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+}
+
+.support-image {
+  width: 70%;
+  height: 70%;
+}

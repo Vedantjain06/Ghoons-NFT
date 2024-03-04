@@ -1,0 +1,159 @@
+@import "../../../styles/global.scss";
+
+.creators {
+  background-color: rgb(244, 137, 137);
+  width: 100vw;
+  color: $black;
+  padding: 4vw 0;
+  margin-top: -20vh;
+
+  & h1 {
+    font-size: 2vw;
+
+    @include mq() {
+      font-size: 6vw;
+    }
+  }
+  
+  & h2 {
+    font-size: 1.5vw;
+    
+    @include mq() {
+      font-size: 4.5vw;
+    }
+  }
+  
+  & p {
+    font-size: 1.2vw;
+    
+    @include mq() {
+      font-size: 3.2vw;
+    }
+  }
+
+  @include mq($tablet-large) {
+    padding: 7vw 0;
+  }
+
+  &__lists {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    margin-top: 2.5vw;
+
+    @include mq($tablet-large) {
+      gap: 8vw;
+      text-align: center;
+      font-size: 4vw;
+    }
+  }
+
+  &__title {
+    color: rgb(40, 4, 129);
+  }
+
+  &__list_title {
+    font-style: normal;
+
+    @include mq($tablet-large) {
+      text-align: center;
+    }
+  }
+
+  &__sub_title {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 85.6%;
+    letter-spacing: 1.12px;
+    max-width: 50vw;
+
+    @include mq($tablet-large) {
+      max-width: none;
+      margin: 3vw 0;
+    }
+  }
+
+  &_leaders {
+    font-family: Din, sans-serif;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    max-width: 40vw;
+    padding: 1vw 10vw 1vw 0;
+
+    &:not(:last-child) {
+      border-bottom: 0.1vw solid $black;
+    }
+
+    @include mq($tablet-large) {
+      max-width: none;
+      padding: 3vw 0;
+      font-size: 4vw;
+    }
+  }
+
+  &_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+
+    @include mq($tablet-large) {
+      align-items: center;
+      gap: 6vw;
+      font-size: 4vw;
+    }
+
+    &__title {
+      text-align: left;
+
+      @include mq($tablet-large) {
+        font-size: 5vw;
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      max-width: 50vw;
+      gap: 1.5vw;
+
+      @include mq($tablet-large) {
+        max-width: none;
+      }
+
+      &_first {
+        max-width: 41vw;
+        font-style: italic;
+
+        @include mq($tablet-large) {
+          max-width: none;
+          gap: 4vw;
+        }
+      }
+    }
+
+    &__link {
+      display: block;
+      max-width: fit-content;
+      padding: 0.3vw 1vw 1vw;
+      text-transform: none;
+      font-weight: bold;
+      color: $white;
+      background-color: $black;
+
+      @include hoverForLinks($cream, $black);
+
+      &_text {
+        position: relative;
+        z-index: 10;
+        font-size: 1.2vw;
+
+          @include mq() {
+            font-size: 4.5vw;
+          }
+      }
+    }
+  }
+}

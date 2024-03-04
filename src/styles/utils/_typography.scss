@@ -1,0 +1,90 @@
+@import "./mixins";
+
+%h1 {
+  font-family: Din, sans-serif;
+  font-size: 5vw;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+%h2 {
+  font-family: Din, sans-serif;
+  font-size: 3vw;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+
+  @include mq() {
+    font-size: 4vw;
+  }
+}
+
+%body-text {
+  font-family: Inter, sans-serif;
+  font-size: 1.5vw;
+  font-style: normal;
+  font-weight: 500;
+
+  @include mq() {
+    font-size: 3vw;
+  }
+}
+
+%link {
+  font-family: Din, sans-serif;
+  font-size: 2vw;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @include mq() {
+    font-size: 4vw;
+  }
+}
+
+.small-text {
+  font-family: Inter, sans-serif;
+  font-size: 1.3vw;
+  font-style: normal;
+  font-weight: 500;
+
+  @include mq() {
+    font-size: 2.5vw;
+  }
+}
+
+.big-text {
+  font-family: Inter, sans-serif;
+  text-align: center;
+  font-size: 5vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  @include mq() {
+    font-size: 6vw;
+  }
+}
+
+.bold {
+  font-weight: 700;
+}
+
+body {
+  @extend %body-text;
+}
+
+h1 {
+  @extend %h1;
+}
+
+h2 {
+  @extend %h2;
+}
+
+a {
+  @extend %link;
+}
