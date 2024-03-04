@@ -1,24 +1,4 @@
-# Solaris metaverse 
-
-- [Live Demo](https://solaris-metaverse.vercel.app)
-
-<hr />
-
-This is a web-site for nft project where artificial intelligence plays a key role in creating and maintaining all of its content.
-
-## Technologies
-- HTML
-- Sass (SCSS)
-- Typescript
-- BEM
-- React
-- React Router
-- React intersection observer
-- Classnames
-- Framer motion
-- Gsap, Scroll Triger
-- Locomotive Scroll(5.0.0-beta.8)
-
+ghcgc
 <hr />
 
 ## How to Run
