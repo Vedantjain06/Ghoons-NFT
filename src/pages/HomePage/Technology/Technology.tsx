@@ -95,6 +95,8 @@ const Technology: React.FC = () => {
     );
   };
 
+
+  
   const handleLeave = (id: number) => {
     setButtonData((prevData) =>
       prevData.map((button) =>
