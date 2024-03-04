@@ -1,7 +1,7 @@
 import "./Footer.scss"
 
 import FooterLinks from '../../../data/FooterLinks.json'
-
+import { pdf } from "../../../pdf/pdf";
 const Footer = () => {
   return (
     <footer className="footer">
@@ -26,7 +26,7 @@ const Footer = () => {
             const { link, title } = curentLink
             return (
               <li key={i}>
-                <a href={link} className="footer__link">
+                <a  href={pdf(title)} className="footer__link">
                   {title}
                 </a>
               </li>

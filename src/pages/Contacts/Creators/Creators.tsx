@@ -23,7 +23,7 @@ const Creators = () => {
             <ul className="creators_list">
               <li className="creators__item">
                 <p className="creators_name">
-                 Eerie_Ghoons
+                 Eric
                 </p>
                 <p className="creators_position">
                   Developer
@@ -31,7 +31,7 @@ const Creators = () => {
               </li>
               <li className="creators__item">
                 <p className="creators_name">
-                  Cike
+                  Jino
                 </p>
                 <p className="creators_position">
                   Artist

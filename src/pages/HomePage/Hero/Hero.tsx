@@ -76,7 +76,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="hero">
-      <TechSupportIcon href="https://web.telegram.org/a/#6406621205" />
+      <TechSupportIcon href="" />
       <ParalaxBackground />
         {/* <p className="small-text hero__under_header">
           Connect you SEI wallets and Grab token points for Partenering Airdrops.

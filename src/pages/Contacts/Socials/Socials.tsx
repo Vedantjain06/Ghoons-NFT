@@ -39,7 +39,7 @@ const Socials: FC<Props> = ({ isOpen }) => {
       id: 1,
       name: "Discord",
       color: "#7289DA",
-      link: "https://discord.com/",
+      link: "https://discord.gg/ghoons",
     },
     {
       id: 2,
@@ -51,13 +51,13 @@ const Socials: FC<Props> = ({ isOpen }) => {
       id: 3,
       name: "Instagram",
       color: "#DD2A7B",
-      link: "https://www.instagram.com/?hl=en",
+      link: "",
     },
     {
       id: 4,
       name: "Telegram",
       color: "#0174AD",
-      link: "https://web.telegram.org/",
+      link: "",
     },
   ]);
 
